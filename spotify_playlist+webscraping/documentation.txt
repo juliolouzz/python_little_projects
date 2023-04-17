@@ -1,0 +1,26 @@
+Title: Billboard 100 Playlist Generator
+
+Description:
+This Python code generates a private playlist on Spotify, containing the top 100 tracks from a specific date according to the Billboard Hot 100 chart. It uses web scraping to extract the list of song names from the Billboard website, and then utilizes the Spotipy library to search for and retrieve the Spotify URIs for each song. Finally, it creates a new private playlist on Spotify with the retrieved song URIs and adds them to the playlist.
+
+Dependencies:
+
+BeautifulSoup: A Python library used for web scraping and parsing HTML content.
+Requests: A Python library used for making HTTP requests to retrieve web page content.
+Spotipy: A Python library used as a Python client for the Spotify Web API, allowing interaction with Spotify's music catalog and user accounts.
+PrettyPrinter (pprint): A Python module used for pretty-printing complex data structures.
+
+Usage:
+
+1. Set up a Spotify Developer account and create a Spotify App to obtain the Spotify client ID, client secret, and redirect URI.
+2. Install the required dependencies (BeautifulSoup, Requests, Spotipy) in your Python environment.
+3. Replace the placeholders for Spotify client ID, client secret, and redirect URI in the code with your own values.
+4. Run the code in a Python environment.
+5. Input the date in the format YYYY-MM-DD for which you want to generate the playlist. The code will scrape the Billboard website for the top 100 tracks from that date.
+6. The code will authenticate with Spotify using the provided client ID, client secret, and redirect URI, and retrieve the Spotify user ID of the currently authenticated user.
+7. The code will search for each song from the Billboard chart on Spotify using the Spotipy library, retrieve the song's Spotify URI, and store it in a list.
+8. A new private playlist with the name "YYYY-MM-DD Billboard Top 100 Tracks" will be created on Spotify, and the retrieved song URIs will be added to the playlist using the sp.playlist_add_items() method from Spotipy.
+
+Note: If any song from the Billboard chart is not found on Spotify, the code will print a message indicating that the song was skipped.
+
+This code can be useful for music enthusiasts who want to create playlists of top tracks from a specific date according to the Billboard chart on Spotify for their personal listening enjoyment.
